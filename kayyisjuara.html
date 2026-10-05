@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Peringkat 1 Ahlamy 3</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =====================================================
+   HALAMAN 1
+===================================================== */
+
+.page1 {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(218, 164, 53, .16),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #050608,
+            #0b1018 50%,
+            #020305
+        );
+}
+
+
+/* garis dekorasi */
+
+.page1::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(218,164,53,.15);
+    border-radius: 50%;
+
+    transform: rotate(25deg);
+}
+
+.page1::after {
+    content: "";
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    border: 1px solid rgba(255,255,255,.04);
+    border-radius: 50%;
+}
+
+
+/* cahaya */
+
+.light {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: #d7a52f;
+
+    filter: blur(150px);
+
+    opacity: .10;
+}
+
+.light1 {
+    top: -180px;
+    left: -150px;
+}
+
+.light2 {
+    bottom: -200px;
+    right: -150px;
+}
+
+
+/* =====================================================
+   KARTU UTAMA
+===================================================== */
+
+.card {
+    position: relative;
+    z-index: 10;
+
+    width: 90%;
+    max-width: 520px;
+
+    padding: 48px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.025)
+        );
+
+    border: 1px solid rgba(255,255,255,.13);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.6),
+        inset 0 1px rgba(255,255,255,.08);
+
+    backdrop-filter: blur(15px);
+
+    animation: cardIn 1s ease;
+}
+
+@keyframes cardIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* badge */
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid rgba(218,164,53,.4);
+    border-radius: 5px;
+
+    color: #dcae3b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+
+/* nomor */
+
+.number {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: clamp(85px, 20vw, 125px);
+
+    line-height: .9;
+
+    font-weight: 700;
+
+    color: #e1b343;
+
+    text-shadow:
+        0 0 35px rgba(225,179,67,.15);
+}
+
+
+/* peringkat */
+
+.rank {
+    margin-top: 15px;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    color: white;
+}
+
+
+/* kelas */
+
+.class {
+    margin-top: 8px;
+
+    color: #8993a1;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+}
+
+
+/* garis */
+
+.line {
+    width: 100px;
+    height: 2px;
+
+    margin: 28px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #dcae3b,
+            transparent
+        );
+}
+
+
+/* tombol */
+
+button {
+
+    padding: 14px 28px;
+
+    border: 1px solid #dcae3b;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #e5b94f;
+
+    font-family: 'Montserrat';
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+button:hover {
+
+    background: #dcae3b;
+
+    color: #08090b;
+
+    box-shadow:
+        0 0 30px rgba(218,164,53,.25);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   DEKORASI HALAMAN 1
+===================================================== */
+
+.corner {
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    border-color: rgba(218,164,53,.35);
+
+    z-index: 2;
+}
+
+.c1 {
+    top: 25px;
+    left: 25px;
+
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.c2 {
+    top: 25px;
+    right: 25px;
+
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+.c3 {
+    bottom: 25px;
+    left: 25px;
+
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+}
+
+.c4 {
+    bottom: 25px;
+    right: 25px;
+
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+}
+
+
+/* =====================================================
+   HALAMAN 2
+===================================================== */
+
+.page2 {
+
+    display: none;
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(218,164,53,.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #030406,
+            #0c131e,
+            #020304
+        );
+}
+
+
+/* garis lingkaran */
+
+.ring {
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(218,164,53,.18);
+
+    box-shadow:
+        0 0 70px rgba(218,164,53,.05);
+
+    animation: ringRotate 20s linear infinite;
+}
+
+@keyframes ringRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* isi */
+
+.content {
+
+    position: relative;
+
+    z-index: 20;
+
+    animation: winnerIn 1.2s ease;
+}
+
+@keyframes winnerIn {
+
+    from {
+        opacity: 0;
+        transform: scale(.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* trophy */
+
+.trophy {
+
+    font-size: 70px;
+
+    margin-bottom: 18px;
+
+    filter:
+        drop-shadow(
+            0 0 20px rgba(218,164,53,.3)
+        );
+
+    animation: trophyFloat 3s ease-in-out infinite;
+}
+
+@keyframes trophyFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* label */
+
+.winnerLabel {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #9ca5b2;
+
+    font-weight: 600;
+}
+
+
+/* nama */
+
+.name {
+
+    margin-top: 12px;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: clamp(42px, 11vw, 72px);
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #f0c85b;
+
+    text-shadow:
+        0 0 35px rgba(218,164,53,.15);
+}
+
+
+/* garis nama */
+
+.nameLine {
+
+    width: 120px;
+    height: 2px;
+
+    margin: 20px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #dcae3b,
+            transparent
+        );
+}
+
+
+.winnerClass {
+
+    color: #c1c8d0;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   PARTIKEL EMAS
+===================================================== */
+
+.particle {
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #e4b84c;
+
+    box-shadow:
+        0 0 12px #e4b84c;
+
+    opacity: .6;
+
+    animation: particleMove linear infinite;
+}
+
+@keyframes particleMove {
+
+    0% {
+        transform:
+            translateY(-20px)
+            scale(.5);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .8;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            scale(1);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   KELIP CAHAYA
+===================================================== */
+
+.star {
+
+    position: absolute;
+
+    color: #e1b343;
+
+    font-size: 12px;
+
+    animation: blink 2s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+
+    from {
+        opacity: .15;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: .9;
+        transform: scale(1.2);
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HALAMAN 1
+===================================================== -->
+
+<section class="page1" id="page1">
+
+    <div class="light light1"></div>
+    <div class="light light2"></div>
+
+    <div class="corner c1"></div>
+    <div class="corner c2"></div>
+    <div class="corner c3"></div>
+    <div class="corner c4"></div>
+
+
+    <div class="card">
+
+        <div class="badge">
+            ACHIEVEMENT
+        </div>
+
+
+        <div class="number">
+            01
+        </div>
+
+
+        <div class="rank">
+            PERINGKAT 1
+        </div>
+
+
+        <div class="class">
+            KELAS AHLAMY 3
+        </div>
+
+
+        <div class="line"></div>
+
+
+        <button onclick="openWinner()">
+            LIHAT PEMENANG
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HALAMAN 2
+===================================================== -->
+
+<section class="page2" id="page2">
+
+    <div class="ring"></div>
+
+
+    <div class="content">
+
+        <div class="trophy">
+            🏆
+        </div>
+
+        <div class="winnerLabel">
+            PERINGKAT 1 • AHLAMY 3
+        </div>
+
+        <div class="name">
+            M AZKA KAYYIS
+        </div>
+
+        <div class="nameLine"></div>
+
+        <div class="winnerClass">
+            SELAMAT ATAS PENCAPAIANNYA
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+
+function openWinner() {
+
+    document.getElementById("page1").style.display = "none";
+
+    document.getElementById("page2").style.display = "flex";
+
+    createParticles();
+
+    createStars();
+
+}
+
+
+/* =====================================================
+   PARTIKEL
+===================================================== */
+
+function createParticles() {
+
+    const page = document.getElementById("page2");
+
+    for (let i = 0; i < 35; i++) {
+
+        const p = document.createElement("div");
+
+        p.className = "particle";
+
+        p.style.left =
+            Math.random() * 100 + "%";
+
+        p.style.animationDuration =
+            (5 + Math.random() * 8) + "s";
+
+        p.style.animationDelay =
+            Math.random() * 6 + "s";
+
+        p.style.width =
+            (2 + Math.random() * 4) + "px";
+
+        p.style.height =
+            p.style.width;
+
+        page.appendChild(p);
+
+    }
+
+}
+
+
+/* =====================================================
+   BINTANG
+===================================================== */
+
+function createStars() {
+
+    const page = document.getElementById("page2");
+
+    for (let i = 0; i < 15; i++) {
+
+        const star = document.createElement("div");
+
+        star.className = "star";
+
+        star.innerHTML = "✦";
+
+        star.style.left =
+            Math.random() * 100 + "%";
+
+        star.style.top =
+            Math.random() * 100 + "%";
+
+        star.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        page.appendChild(star);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
